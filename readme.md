@@ -38,7 +38,7 @@ url:`GET /access/:token_id`
 
 URL: `curl -X GET http://localhost:8000/access/050096c6e3a64489ff0ea3d1bcd4fb2a`
 
-Return status code: `200 OK`
+Return status code: `200`
 
 Return data: `{"access": [1, 2, 3]}`
 
@@ -46,6 +46,6 @@ Return data: `{"access": [1, 2, 3]}`
 
 URL: `curl -X GET http://localhost:8000/access/user_not_in_mock_system`
 
-Return status code: `200 OK`
+Return status code: `404`
 
-Return data: `{"access": [1, 2, 3]}`
+Return data: `{"title": "404 Not Found", "description": "Token: \"user_not_in_mock_system\" not found"}%`
